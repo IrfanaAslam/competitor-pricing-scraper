@@ -1,6 +1,6 @@
 # 💰 Competitor Pricing Scraper Dashboard
 
-![Dashboard Preview](assets/dashboard_preview.png) <!-- Optional: add screenshot -->
+![Dashboard Preview]([assets/dashboard_preview.png](https://competitor-pricing-scraper-c2ofapncptttfqperzapdz.streamlit.app/)) <!-- Optional: add screenshot -->
 
 ## Table of Contents
 - [About the Project](#about-the-project)
@@ -108,6 +108,7 @@ LinkedIn: linkedin.com/in/irfanaaslam
 
 ## License
 This project is open-source and available under the MIT License.
+
 
 
 
