@@ -35,11 +35,11 @@ This project demonstrates hands-on skills in **web scraping, data analysis, and 
 - **Searchable table:** Quickly inspect products and prices  
 - **Portfolio-ready layout:** Clean design for presentation  
 
----
+
 
 ## Installation
 1. Clone the repository:
-```bash
+
 git clone https://github.com/yourusername/competitor-pricing-scraper.git
 cd competitor-pricing-scraper
 Create a virtual environment and activate it:
@@ -72,7 +72,7 @@ View the interactive chart and product table
 
 Customize and showcase your scraping results
 
-Technologies
+## Technologies
 Python 3.x – Programming language
 
 Streamlit – Web dashboard framework
@@ -85,7 +85,7 @@ Pandas – Data handling
 
 Plotly – Interactive charts and visualizations
 
-About Me
+## About Me
 Hi! I’m Irfana Aslam, a passionate Python developer and web/data enthusiast.
 I specialize in:
 
@@ -98,7 +98,7 @@ Practical Python projects for real-world applications
 I enjoy turning raw data into actionable insights and visually appealing dashboards.
 Check out this project as part of my portfolio to see how I combine scraping, analysis, and modern UI design to solve practical problems.
 
-Connect with me:
+## Connect with me:
 
 Email: irfanaaslam69@gmail.com
 
@@ -106,8 +106,8 @@ GitHub: github.com/irfanaaslam
 
 LinkedIn: linkedin.com/in/irfanaaslam
 
-License
+## License
 This project is open-source and available under the MIT License.
 
-markdown
-Copy code
+
+
