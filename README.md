@@ -1,114 +1,116 @@
-# 💰 Competitor Pricing Scraper Dashboard
+# 🛒 Competitor Pricing Scraper
 
-![Dashboard Preview]([assets/dashboard_preview.png](https://competitor-pricing-scraper-c2ofapncptttfqperzapdz.streamlit.app/)) <!-- Optional: add screenshot -->
-
-## Table of Contents
-- [About the Project](#about-the-project)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Technologies](#technologies)
-- [About Me](#about-me)
-- [License](#license)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-Streamlit-blue?style=for-the-badge&logo=streamlit)]
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)](https://www.python.org/)  
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 ---
 
-## About the Project
-The **Competitor Pricing Scraper Dashboard** is a modern, interactive web application built with **Streamlit** for scraping and visualizing product prices from e-commerce websites.  
+# About the Project
 
-It allows users to:
-- Scrape a **default e-commerce site** (Books to Scrape)  
-- Input a **custom URL** for scraping product prices  
-- Filter products by price range interactively  
-- Visualize pricing insights using **interactive charts**  
-- Explore a **searchable and scrollable product table**  
+**Competitor Pricing Scraper** is an interactive Streamlit dashboard that scrapes product prices from e-commerce pages and visualizes pricing insights. It’s built to be a portfolio-ready demo showing **web scraping**, **data cleaning**, and **interactive visualization** skills.
 
-This project demonstrates hands-on skills in **web scraping, data analysis, and dashboard visualization**, making it ideal for showcasing to potential employers.
+**Live demo:**  
+https://competitor-pricing-scraper-c2ofapncptttfqperzapdz.streamlit.app/
 
 ---
 
 ## Features
-- **Dual scraper tabs:** Default website and user-input URL  
-- **Dynamic metrics cards:** Display number of products, average, minimum, and maximum prices  
-- **Interactive price filter:** Range slider to filter products  
-- **Visual analytics:** Plotly bar chart with hover info and price labels  
-- **Searchable table:** Quickly inspect products and prices  
-- **Portfolio-ready layout:** Clean design for presentation  
 
+- ✅ Default scraper (Books to Scrape) for instant demo data  
+- ✅ User-input scraper: paste a product/category URL and scrape results  
+- ✅ Clean price parsing and NaN handling  
+- ✅ Interactive charts (Plotly) and searchable product table  
+- ✅ Price-range filter and exportable CSV (download button)  
+- ✅ Modular scrapers (Requests + BeautifulSoup) with optional Selenium support for dynamic sites
 
+---
 
-## Installation
-1. Clone the repository:
+## Tech Stack
+
+- **Python 3.10+**  
+- **Streamlit** (dashboard)  
+- **Requests + BeautifulSoup** (scraping static pages)  
+- **Selenium** (optional, dynamic pages)  
+- **Pandas** (data processing)  
+- **Plotly** (interactive visualizations)
+
+---
+
+## Repo Structure
+
+competitor-pricing-scraper/
+│
+├─ app.py # Main Streamlit dashboard
+├─ scraper.py # Example scraper (books / webscraper test site)
+├─ scrapers/ # Additional scraper modules (books_scraper.py, etc.)
+├─ utils/ # helpers (email alerts, cleaning utilities)
+├─ assets/ # screenshots / demo images
+├─ requirements.txt
+└─ README.md
+
+yaml
+Copy code
+
+---
+
+## Quick Start (Run locally)
+
+1. Clone:
 
 git clone https://github.com/yourusername/competitor-pricing-scraper.git
 cd competitor-pricing-scraper
-Create a virtual environment and activate it:
+Create & activate venv (recommended):
 
 bash
 Copy code
 python -m venv venv
 # Windows
 venv\Scripts\activate
-# Mac/Linux
+# macOS / Linux
 source venv/bin/activate
 Install dependencies:
 
 bash
 Copy code
 pip install -r requirements.txt
-Run the Streamlit app:
+Run the app:
 
 bash
 Copy code
-streamlit run app.py
-Usage
-Open the Streamlit app in your browser (usually http://localhost:8501)
+python -m streamlit run app.py
+Open the URL shown in the terminal (usually http://localhost:8501).
 
-Navigate between Default Scraper and Custom URL Scraper tabs
+## Usage Notes
+The default demo scrapes books.toscrape.com (safe demo site).
 
-Use the price range slider to filter products
+To scrape other sites, paste a product/category URL into the Custom URL tab. For sites that load data with JavaScript you may need the Selenium option (setup ChromeDriver or use webdriver-manager).
 
-View the interactive chart and product table
+Do not scrape sites you don't have permission to scrape or that block automated access; check each site's robots.txt / terms of service.
 
-Customize and showcase your scraping results
 
-## Technologies
-Python 3.x – Programming language
+## Customization & Extensions (ideas to impress)
+Add email / Telegram alerts for price changes (utils/email_alert.py)
 
-Streamlit – Web dashboard framework
+Add scheduled scraping via GitHub Actions to update data nightly
 
-BeautifulSoup – Web scraping HTML parser
+Add a Streamlit Cloud deployment badge and CI (GitHub Actions) to auto-deploy on push
 
-Requests – HTTP requests
-
-Pandas – Data handling
-
-Plotly – Interactive charts and visualizations
+Add selector input: let users type CSS selectors for Name / Price to make the scraper universal
 
 ## About Me
-Hi! I’m Irfana Aslam, a passionate Python developer and web/data enthusiast.
-I specialize in:
-
-Web scraping and automation
-
-Interactive dashboards and data visualization
-
-Practical Python projects for real-world applications
-
-I enjoy turning raw data into actionable insights and visually appealing dashboards.
-Check out this project as part of my portfolio to see how I combine scraping, analysis, and modern UI design to solve practical problems.
-
-## Connect with me:
+Irfana Aslam — Python developer & data enthusiast.
+I build practical tools combining web scraping, data processing, and interactive dashboards to turn raw data into business insights.
 
 Email: irfanaaslam69@gmail.com
 
-GitHub: github.com/irfanaaslam
+GitHub: https://github.com/IrfanaAslam
 
-LinkedIn: linkedin.com/in/irfanaaslam
+LinkedIn: https://www.linkedin.com/in/irfanaaslam (optional — add your profile link)
 
 ## License
-This project is open-source and available under the MIT License.
+This project is released under the MIT License. See LICENSE for details.
 
-
-
+## Contact / Demo Requests
+Want a tailored demo (e.g., scrape a specific competitor or add alerts)? Open an issue or contact me at irfanaaslam69@gmail.com — I’ll help you customize and deploy it.
 
