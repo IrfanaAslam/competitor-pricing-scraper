@@ -1,6 +1,6 @@
 # 💹 Pricing Intelligence Dashboard
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=streamlit)](https://competitor-pricing-scraper-c2ofapncptttfqperzapdz.streamlit.app/)
+[![Live Demo](https://competitor-pricing-scraper-c2ofapncptttfqperzapdz.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.35+-red?style=for-the-badge&logo=streamlit)](https://streamlit.io/)
 [![Plotly](https://img.shields.io/badge/Plotly-5.20+-blue?style=for-the-badge&logo=plotly)](https://plotly.com/)
