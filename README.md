@@ -6,7 +6,7 @@
 [![Plotly](https://img.shields.io/badge/Plotly-5.20+-blue?style=for-the-badge&logo=plotly)](https://plotly.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-> A full-featured pricing intelligence dashboard — scrape, filter, analyse, and export live e-commerce product data. Built as a portfolio-ready showcase of **web scraping**, **data analytics**, and **interactive visualisation** skills.
+> A full-featured pricing intelligence dashboard - scrape, filter, analyse, and export live e-commerce product data. Built as a portfolio-ready showcase of **web scraping**, **data analytics**, and **interactive visualisation** skills.
 
 **🔗 Live Demo:** https://competitor-pricing-scraper-c2ofapncptttfqperzapdz.streamlit.app/
 
@@ -15,23 +15,23 @@
 ## ✨ Features
 
 ### 🔍 Scraping
-- **Default Scraper** — scrape up to 50 pages (1,000 books) from [books.toscrape.com](http://books.toscrape.com) instantly
-- **Category Scraper** — browse and scrape any of 29 genre categories (Mystery, Fantasy, Thriller, Science Fiction, and more)
-- **Custom URL Scraper** — paste any compatible listing URL; `https://` is added automatically if omitted
-- **Multi-page category support** — automatically follows pagination within categories
+- **Default Scraper** - scrape up to 50 pages (1,000 books) from [books.toscrape.com](http://books.toscrape.com) instantly
+- **Category Scraper** - browse and scrape any of 29 genre categories (Mystery, Fantasy, Thriller, Science Fiction, and more)
+- **Custom URL Scraper** - paste any compatible listing URL; `https://` is added automatically if omitted
+- **Multi-page category support** - automatically follows pagination within categories
 
 ### 📊 Dashboard & Visualisation
-- Bar chart — top 25 books by price
-- Histogram — price frequency distribution
+- Bar chart - top 25 books by price
+- Histogram - price frequency distribution
 - Average price by star rating
-- Price bucket donut chart — segment books into price ranges
+- Price bucket donut chart - segment books into price ranges
 - Rating distribution pie chart
-- Price vs Rating scatter plot — bubble sized by Value Score
+- Price vs Rating scatter plot - bubble sized by Value Score
 
 ### 🔬 Analytics
-- **Top 10 Best Value** books — ranked by Value Score `(Rating ÷ Price) × 10`
-- **Price Trend** across pages — line chart showing avg price per scraped page
-- **Auto Insights** — 5 automatically generated data insights
+- **Top 10 Best Value** books - ranked by Value Score `(Rating ÷ Price) × 10`
+- **Price Trend** across pages - line chart showing avg price per scraped page
+- **Auto Insights** - 5 automatically generated data insights
 
 ### 🎛️ Filters (Sidebar)
 - 🔍 Search by title keyword
@@ -115,7 +115,7 @@ pip install -r requirements.txt
 python -m streamlit run app.py
 ```
 
-Open the URL shown in your terminal — usually `http://localhost:8501`.
+Open the URL shown in your terminal - usually `http://localhost:8501`.
 
 ---
 
@@ -174,10 +174,10 @@ http://books.toscrape.com/catalogue/page-2.html
 
 ## 📝 Usage Notes
 
-- All scraping targets [books.toscrape.com](http://books.toscrape.com) — a **legal, purpose-built scraping sandbox**.
+- All scraping targets [books.toscrape.com](http://books.toscrape.com) - a **legal, purpose-built scraping sandbox**.
 - Always check a site's `robots.txt` and Terms of Service before scraping any real website.
 - For JavaScript-heavy sites, Selenium integration can be added (requires ChromeDriver or `webdriver-manager`).
-- Be respectful — the scraper includes a polite delay between requests.
+- Be respectful - the scraper includes a polite delay between requests.
 
 ---
 
@@ -196,7 +196,7 @@ http://books.toscrape.com/catalogue/page-2.html
 
 ## 👩‍💻 About Me
 
-**Irfana Aslam** — Python developer & data enthusiast.
+**Irfana Aslam** - Python developer & data enthusiast.
 I build practical tools combining web scraping, data processing, and interactive dashboards to turn raw data into actionable business insights.
 
 - 📧 **Email:** irfanaaslam69@gmail.com
@@ -213,5 +213,5 @@ This project is released under the [MIT License](LICENSE).
 
 ## 💬 Contact / Demo Requests
 
-Want a tailored demo — e.g. scrape a specific competitor site, add price-change alerts, or deploy to the cloud?
+Want a tailored demo - e.g. scrape a specific competitor site, add price-change alerts, or deploy to the cloud?
 Open an [issue](https://github.com/IrfanaAslam/competitor-pricing-scraper/issues) or email **irfanaaslam69@gmail.com** and I'll help you customise and deploy it.
