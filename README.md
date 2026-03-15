@@ -1,116 +1,217 @@
-# 🛒 Competitor Pricing Scraper
+# 💹 Pricing Intelligence Dashboard
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-Streamlit-blue?style=for-the-badge&logo=streamlit)]
-[![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)](https://www.python.org/)  
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=streamlit)](https://competitor-pricing-scraper-c2ofapncptttfqperzapdz.streamlit.app/)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.35+-red?style=for-the-badge&logo=streamlit)](https://streamlit.io/)
+[![Plotly](https://img.shields.io/badge/Plotly-5.20+-blue?style=for-the-badge&logo=plotly)](https://plotly.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
----
+> A full-featured pricing intelligence dashboard — scrape, filter, analyse, and export live e-commerce product data. Built as a portfolio-ready showcase of **web scraping**, **data analytics**, and **interactive visualisation** skills.
 
-# About the Project
-
-**Competitor Pricing Scraper** is an interactive Streamlit dashboard that scrapes product prices from e-commerce pages and visualizes pricing insights. It’s built to be a portfolio-ready demo showing **web scraping**, **data cleaning**, and **interactive visualization** skills.
-
-**Live demo:**  
-https://competitor-pricing-scraper-c2ofapncptttfqperzapdz.streamlit.app/
+**🔗 Live Demo:** https://competitor-pricing-scraper-c2ofapncptttfqperzapdz.streamlit.app/
 
 ---
 
-## Features
+## ✨ Features
 
-- ✅ Default scraper (Books to Scrape) for instant demo data  
-- ✅ User-input scraper: paste a product/category URL and scrape results  
-- ✅ Clean price parsing and NaN handling  
-- ✅ Interactive charts (Plotly) and searchable product table  
-- ✅ Price-range filter and exportable CSV (download button)  
-- ✅ Modular scrapers (Requests + BeautifulSoup) with optional Selenium support for dynamic sites
+### 🔍 Scraping
+- **Default Scraper** — scrape up to 50 pages (1,000 books) from [books.toscrape.com](http://books.toscrape.com) instantly
+- **Category Scraper** — browse and scrape any of 29 genre categories (Mystery, Fantasy, Thriller, Science Fiction, and more)
+- **Custom URL Scraper** — paste any compatible listing URL; `https://` is added automatically if omitted
+- **Multi-page category support** — automatically follows pagination within categories
+
+### 📊 Dashboard & Visualisation
+- Bar chart — top 25 books by price
+- Histogram — price frequency distribution
+- Average price by star rating
+- Price bucket donut chart — segment books into price ranges
+- Rating distribution pie chart
+- Price vs Rating scatter plot — bubble sized by Value Score
+
+### 🔬 Analytics
+- **Top 10 Best Value** books — ranked by Value Score `(Rating ÷ Price) × 10`
+- **Price Trend** across pages — line chart showing avg price per scraped page
+- **Auto Insights** — 5 automatically generated data insights
+
+### 🎛️ Filters (Sidebar)
+- 🔍 Search by title keyword
+- 💷 Price range slider
+- ⭐ Minimum star rating filter
+- 📦 Availability filter
+- ↕️ Sort by Price, Rating, Value Score, or Title (asc/desc)
+
+### 📤 Export
+- Download filtered data as **CSV**
+- Download filtered data as **Excel (.xlsx)**
+
+### 🎨 UI / UX
+- 🌙 Dark / ☀️ Light mode toggle
+- Custom typography (Syne + DM Mono fonts)
+- Fully responsive wide layout
+- Built-in **How to Use** guide tab
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- **Python 3.10+**  
-- **Streamlit** (dashboard)  
-- **Requests + BeautifulSoup** (scraping static pages)  
-- **Selenium** (optional, dynamic pages)  
-- **Pandas** (data processing)  
-- **Plotly** (interactive visualizations)
+| Layer | Technology |
+|---|---|
+| Dashboard | Streamlit 1.35+ |
+| Scraping | Requests + BeautifulSoup4 |
+| Data Processing | Pandas |
+| Visualisation | Plotly Express + Graph Objects |
+| Excel Export | OpenPyXL |
+| Language | Python 3.10+ |
 
 ---
 
-## Repo Structure
+## 📁 Project Structure
 
+```
 competitor-pricing-scraper/
 │
-├─ app.py # Main Streamlit dashboard
-├─ scraper.py # Example scraper (books / webscraper test site)
-├─ scrapers/ # Additional scraper modules (books_scraper.py, etc.)
-├─ utils/ # helpers (email alerts, cleaning utilities)
-├─ assets/ # screenshots / demo images
-├─ requirements.txt
-└─ README.md
-
-yaml
-Copy code
+├── app.py                   # Main Streamlit dashboard (v2.0)
+├── scraper.py               # Core scraping logic
+├── main.py                  # CLI entry point
+├── requirements.txt
+├── README.md
+│
+├── data/                    # CSV / Excel outputs (auto-created)
+└── assets/                  # Screenshots / demo images
+```
 
 ---
 
-## Quick Start (Run locally)
+## 🚀 Quick Start
 
-1. Clone:
+### 1. Clone the repo
 
-git clone https://github.com/yourusername/competitor-pricing-scraper.git
+```bash
+git clone https://github.com/IrfanaAslam/competitor-pricing-scraper.git
 cd competitor-pricing-scraper
-Create & activate venv (recommended):
+```
 
-bash
-Copy code
+### 2. Create & activate a virtual environment *(recommended)*
+
+```bash
 python -m venv venv
+
 # Windows
 venv\Scripts\activate
+
 # macOS / Linux
 source venv/bin/activate
-Install dependencies:
+```
 
-bash
-Copy code
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
-Run the app:
+```
 
-bash
-Copy code
+### 4. Run the dashboard
+
+```bash
 python -m streamlit run app.py
-Open the URL shown in the terminal (usually http://localhost:8501).
+```
 
-## Usage Notes
-The default demo scrapes books.toscrape.com (safe demo site).
+Open the URL shown in your terminal — usually `http://localhost:8501`.
 
-To scrape other sites, paste a product/category URL into the Custom URL tab. For sites that load data with JavaScript you may need the Selenium option (setup ChromeDriver or use webdriver-manager).
+---
 
-Do not scrape sites you don't have permission to scrape or that block automated access; check each site's robots.txt / terms of service.
+## 🖥️ CLI Usage
 
+Run the scraper headlessly from the command line and save results to CSV:
 
-## Customization & Extensions (ideas to impress)
-Add email / Telegram alerts for price changes (utils/email_alert.py)
+```bash
+python main.py               # Scrape 5 pages (default)
+python main.py --pages 10    # Scrape 10 pages
+```
 
-Add scheduled scraping via GitHub Actions to update data nightly
+Output is saved to `data/competitor_prices.csv`.
 
-Add a Streamlit Cloud deployment badge and CI (GitHub Actions) to auto-deploy on push
+---
 
-Add selector input: let users type CSS selectors for Name / Price to make the scraper universal
+## 💡 Value Score Explained
 
-## About Me
-Irfana Aslam — Python developer & data enthusiast.
-I build practical tools combining web scraping, data processing, and interactive dashboards to turn raw data into business insights.
+Every book is assigned a **Value Score**:
 
-Email: irfanaaslam69@gmail.com
+```
+Value Score = (Star Rating ÷ Price) × 10
+```
 
-GitHub: https://github.com/IrfanaAslam
+| Example | Price | Rating | Value Score |
+|---|---|---|---|
+| Hidden gem | £5.00 | ⭐⭐⭐⭐⭐ | **10.0** |
+| Average | £20.00 | ⭐⭐⭐ | **1.5** |
+| Poor value | £50.00 | ⭐⭐ | **0.4** |
 
-LinkedIn: https://www.linkedin.com/in/irfanaaslam (optional — add your profile link)
+Use the **Top 10 Best Value** table in the Analytics tab to find the highest-scoring books instantly.
 
-## License
-This project is released under the MIT License. See LICENSE for details.
+---
 
-## Contact / Demo Requests
-Want a tailored demo (e.g., scrape a specific competitor or add alerts)? Open an issue or contact me at irfanaaslam69@gmail.com — I’ll help you customize and deploy it.
+## 🗂️ Category URLs (Custom URL Tab)
 
+You can also paste these directly into the **Custom URL** tab:
+
+```
+# Genre categories
+http://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+http://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html
+http://books.toscrape.com/catalogue/category/books/thriller_37/index.html
+http://books.toscrape.com/catalogue/category/books/fantasy_19/index.html
+http://books.toscrape.com/catalogue/category/books/romance_8/index.html
+http://books.toscrape.com/catalogue/category/books/history_32/index.html
+http://books.toscrape.com/catalogue/category/books/business_35/index.html
+http://books.toscrape.com/catalogue/category/books/self-help_41/index.html
+
+# Specific pages
+http://books.toscrape.com/catalogue/page-1.html
+http://books.toscrape.com/catalogue/page-2.html
+```
+
+---
+
+## 📝 Usage Notes
+
+- All scraping targets [books.toscrape.com](http://books.toscrape.com) — a **legal, purpose-built scraping sandbox**.
+- Always check a site's `robots.txt` and Terms of Service before scraping any real website.
+- For JavaScript-heavy sites, Selenium integration can be added (requires ChromeDriver or `webdriver-manager`).
+- Be respectful — the scraper includes a polite delay between requests.
+
+---
+
+## 🔧 Customisation & Extension Ideas
+
+| Idea | Description |
+|---|---|
+| 📧 Price alerts | Email / Telegram notifications when prices drop |
+| ⏰ Scheduled scraping | GitHub Actions workflow to refresh data nightly |
+| 🗄️ Database storage | SQLite / PostgreSQL for historical price tracking |
+| 🎨 CSS selector input | Let users enter custom selectors for a universal scraper |
+| 🚀 Auto-deploy CI | GitHub Actions pipeline to deploy to Streamlit Cloud on push |
+| 📊 Price history charts | Track how prices change over time with stored snapshots |
+
+---
+
+## 👩‍💻 About Me
+
+**Irfana Aslam** — Python developer & data enthusiast.
+I build practical tools combining web scraping, data processing, and interactive dashboards to turn raw data into actionable business insights.
+
+- 📧 **Email:** irfanaaslam69@gmail.com
+- 🐙 **GitHub:** [github.com/IrfanaAslam](https://github.com/IrfanaAslam)
+- 💼 **LinkedIn:** [linkedin.com/in/irfanaaslam](https://www.linkedin.com/in/irfanaaslam)
+
+---
+
+## 📄 License
+
+This project is released under the [MIT License](LICENSE).
+
+---
+
+## 💬 Contact / Demo Requests
+
+Want a tailored demo — e.g. scrape a specific competitor site, add price-change alerts, or deploy to the cloud?
+Open an [issue](https://github.com/IrfanaAslam/competitor-pricing-scraper/issues) or email **irfanaaslam69@gmail.com** and I'll help you customise and deploy it.
